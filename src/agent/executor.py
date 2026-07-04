@@ -1,6 +1,18 @@
 from agent.agent import Agent
 from agent.memory import Memory
+
 class Executor:
-    def __init__(self): self.a=Agent(); self.m=Memory()
-    def run(self,q):
-        ans=self.a.run(q); self.m.save(q,ans); return ans
+
+    def __init__(self):
+
+        self.agent = Agent()
+
+        self.memory = Memory()
+
+    def run(self, question):
+
+        answer = self.agent.execute(question)
+
+        self.memory.save(question, answer)
+
+        return answer
