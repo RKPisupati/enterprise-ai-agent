@@ -1,2 +1,3 @@
-# enterprise-ai-agent
-AI Agent using Python
+# Enterprise AI Agent
+
+Run `python -m src.main`
