@@ -1,3 +1,14 @@
 from agent.executor import Executor
-e=Executor()
-print(e.run("What is Pega?"))
+
+executor = Executor()
+
+while True:
+
+    question = input("You: ")
+
+    if question == "exit":
+        break
+
+    answer = executor.run(question)
+
+    print("Agent:", answer)
